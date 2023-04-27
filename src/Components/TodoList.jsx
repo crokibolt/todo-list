@@ -1,18 +1,22 @@
+import { List, ListItem, ListItemText } from '@mui/material'
 import React from 'react'
 
 function TodoList({items}) {
   return (
-    <div>
-        <ul>
+    <>
+        <List>
             {items.map((item) => {
                 return(
-                    <li key={item.id}>
-                        {item.task}
-                    </li>
+                    <ListItem key={item.id}>
+                        <ListItemText 
+                          primary={item.task}
+                          secondary={item.dateTime}
+                        />
+                    </ListItem>
                 )
             })}
-        </ul>
-    </div>
+        </List>
+    </>
   )
 }
 
