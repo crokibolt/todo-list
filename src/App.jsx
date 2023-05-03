@@ -8,14 +8,20 @@ import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import { Container } from '@mui/material';
 
 dayjs.extend(customParseFormat);
 
-const darkTheme = createTheme({
+const theme = createTheme({
   palette: {
     mode: 'dark',
   },
 });
+
+theme.typography.h3 = {
+  fontSize: '2.5rem'
+}
 
 const mockItems = [
   {
@@ -51,14 +57,17 @@ function App() {
   }
  
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <h3>TodoList</h3>
-        <TodoList items={items} handleRemove={removeItem} />
-        <ItemForm handleAdd={addItem} />
-        
-      </LocalizationProvider>
+      <Container maxWidth="sm">
+
+        <Typography sx={{textAlign: 'center'}} variant="h3">TodoList</Typography>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <TodoList items={items} handleRemove={removeItem} />
+          <ItemForm handleAdd={addItem} />          
+        </LocalizationProvider>
+
+      </Container>
     </ThemeProvider>
   )
 }

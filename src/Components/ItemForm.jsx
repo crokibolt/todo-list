@@ -51,6 +51,7 @@ function ItemForm({handleAdd}) {
     <>
       { !visibleForm ? 
           <Button 
+            sx={{fontWeight: 'bold'}}
             variant="contained" 
             color="success"
             type="button" 
@@ -59,8 +60,9 @@ function ItemForm({handleAdd}) {
                 Add ToDo
             </Button>
         :
-          <form onSubmit={handleSubmit}>
+          <form style={{marginTop: '2rem'}} onSubmit={handleSubmit}>
             <TextField 
+                sx={{mr: '1rem'}}
                 label="Todo" 
                 value={todoTask}
                 required
@@ -69,7 +71,10 @@ function ItemForm({handleAdd}) {
               value={todoDateTime} 
               onChange={(newValue) => setTodoDateTime(newValue)}
               required />
-            <Button variant="contained" type="submit">Add</Button>
+            <Button 
+              sx={{display: 'block', width: '90%', mt: '0.5rem', fontWeight: 'bold'}} 
+              variant="contained" 
+              type="submit">Add</Button>
           </form>
       }
     </>
