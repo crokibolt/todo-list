@@ -26,7 +26,6 @@ function ItemForm({handleAdd}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const item = {
-      id: uuidv4(),
       task: todoTask,
       dateTime: dayjs(todoDateTime).format('MM/DD/YYYY hh:mm A')
     };
