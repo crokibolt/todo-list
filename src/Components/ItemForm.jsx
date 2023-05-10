@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { DateTimePicker } from '@mui/x-date-pickers';
 import { TextField, Button } from '@mui/material';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 
 
 function ItemForm({handleAdd}) {
