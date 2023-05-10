@@ -9,7 +9,8 @@ import dayjs from 'dayjs';
 function ItemForm({handleAdd}) {
   const [visibleForm, setVisibleForm] = useState(false);
   const [todoTask, setTodoTask] = useState('');
-  const [todoDateTime, setTodoDateTime] = useState(dayjs().add(8, 'hour'));
+  const initDate = dayjs().add(8, 'hour');
+  const [todoDateTime, setTodoDateTime] = useState(initDate);
 
   const toggleVisibleForm = () => {
     setVisibleForm((prevVisible) => !prevVisible)
@@ -20,7 +21,8 @@ function ItemForm({handleAdd}) {
   }
 
   const resetDateTime = () => {
-    setTodoDateTime(dayjs().add(8, 'hour'));
+    const date = dayjs().add(8, 'hour');
+    setTodoDateTime(date);
   }
 
   const handleSubmit = (e) => {
