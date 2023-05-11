@@ -1,7 +1,10 @@
 <h1 align="center">Todo List</h1>
 
+<p>
     Personal React Project to test my knowledge of web development.
-    Can visit clicking [_here_](https://crokibolt.github.io/todo-list/).
+    Can visit clicking <a href="https://crokibolt.github.io/todo-list/"> here </a>.
+</p>
+
 
 ### Technologies and libraries used
 - [_React_](https://react.dev/).
