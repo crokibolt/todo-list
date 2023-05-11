@@ -2,7 +2,7 @@
 
 <p>
     Personal React Project to test my knowledge of web development.
-    Can visit clicking <a ref="https://crokibolt.github.io/todo-list/">here</a>.
+    Can visit clicking [_here_](https://crokibolt.github.io/todo-list/).
 </p>
 
 ### Technologies and libraries used
